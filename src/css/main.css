@@ -1,0 +1,150 @@
+/* imports */
+/* base styles */
+* {
+  box-sizing: border-box;
+}
+html {
+  position: relative;
+  min-height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+html.overflow {
+  overflow: hidden;
+}
+h1 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+.section {
+  padding: 65px 0;
+}
+.section--rectangles {
+  color: #ffffff;
+  background-image: radial-gradient(circle 327px at 50% 241.61%, #3aa1cb 0%, #2f82a4 100%), url('/img/rectangles.png');
+}
+.section--desktop {
+  background-image: url('/img/desktop.png');
+  background-position: center center;
+  background-size: cover;
+}
+.section--green {
+  background-color: #00c485;
+}
+.section--preview {
+  min-height: 700px;
+}
+.relative {
+  position: relative;
+}
+.container {
+  position: relative;
+  min-width: 1024px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.preview {
+  margin-left: 40%;
+  max-width: 650px;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+}
+.promo {
+  text-align: center;
+  color: #ffffff;
+  padding: 0 50px;
+}
+.promo__image-block {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.promo__title {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.promo__image {
+  width: 100%;
+  height: 100%;
+}
+.promo__desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.macbook {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40%;
+  max-width: 705px;
+  height: auto;
+  background-image: url('/img/macbook-pro-retina.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+  padding: 17px 14px;
+  background-color: #f7f7f8;
+  text-align: center;
+  border-radius: 30px;
+  margin-bottom: 35px;
+}
+/* BUTTONS */
+.btn {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn--green {
+  background-color: #00c586;
+}
+.btn--install {
+  font-size: 24px;
+  font-weight: 400;
+  padding: 21px 60px;
+}
+/* LINKS */
+.link {
+  color: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.link--sm {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px;
+}
+.link:hover {
+  text-decoration: underline;
+}
+/* reviews */
+.review {
+  -ms-flex: 1;
+      flex: 1;
+  padding: 0 50px;
+}
+.review__desc {
+  padding: 25px 15px;
+  margin-bottom: 15px;
+  border-radius: 2px;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #ffffff;
+}
