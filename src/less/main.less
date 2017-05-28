@@ -76,18 +76,25 @@ main.fill {
 	margin-right: auto;
 }
 
-.col-5, .col-7 {
+.col-4, .col-8,.col-5, .col-7 {
  position:relative;
  width:100%;
+}
+.col-4{
+	flex:0 0 33.333333%;
+	max-width:33.333333%;
 }
 .col-5 {
 	flex:0 0 41.666667%;
  	max-width:41.666667%
 }
-
 .col-7 {
 	flex:0 0 58.333333%;
 	max-width:58.333333%
+}
+.col-8 { 
+	flex:0 0 66.666667%;
+	max-width:66.666667%;
 }
 .col-offset-5 {
 	margin-left:41.666667%;
@@ -238,6 +245,14 @@ main.fill {
 }
 
 /* LINKS */
+.text-link {
+	font-weight: bold;
+	text-decoration: underline;
+	color: #ffffff;
+	&:hover {
+		color: #3396bd;
+	}
+}
 
 .link {
 	display: inline-block;
@@ -367,6 +382,7 @@ thead &__cell{
 
 .shape {
 	display: inline-block;
+	vertical-align: top;
 	background-repeat: no-repeat;
 	width: auto;
 	width: 20px;
@@ -385,6 +401,15 @@ thead &__cell{
 	&--star-clear {
 		height: 20px;
 		background-image: url('/img/shape_star--clear.png'); 
+	}
+	&--up {
+		background-image: url('/img/shape_up.png'); 
+	}
+	&--down {
+		background-image: url('/img/shape_down.png'); 
+	}
+	&--sid {
+		background-image: url('/img/shape_sid.png'); 
 	}
 }
 
@@ -439,8 +464,7 @@ thead &__cell{
 	text-align: center;
 	height: 460px;
 	margin-top: 150px;
-
-
+	
 	&__title {
 		font-size: 28px;
 		margin-bottom: 30px;
@@ -453,7 +477,55 @@ thead &__cell{
 		margin-bottom: 50px;
 	}
 }
+.block {
+	left:0;
+	right: 0;
+	margin: auto;
+	margin-top:150px;
+	&__desc {
+		padding-top: 15px;
+	}
+	&__header {
+		position: absolute;
+		top:-50px;
+		font-size: 24px;
+		color:#ffffff;
+		text-align: center;
+		left: 0;
+		right: 0;
+		margin:auto;
+	}
 
+	&__content {
+		padding: 35px;
+	}
+	&__footer {
+		background-color: #00c485;
+		color:#ffffff;
+		text-align: center;
+		font-size: 16px;
+		height: 70px;
+		line-height: 70px;
+
+	}
+	&--active {
+		width:770px;
+		
+		background-color: #ffffff;
+		color:#666666;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+		
+		&__title {
+			font-eize:24px;
+			margin-bottom:15px;
+		}
+
+		&__desc {
+			font-size: 16px;
+			margin-bottom: 25px;
+		}
+	}
+}
 .step {
 	flex:1;
 	&__number {
@@ -545,5 +617,39 @@ thead &__cell{
 	}
 	&__button {
 		padding:5px 15px;
+	}
+}
+
+
+
+.process {
+	width: 100%;
+	
+	font-size: 12px;
+	color: #a1a1a1;
+
+	&__header {
+
+	}
+	&__body {
+		height: 5px;
+		width: 100%;
+		border-radius: 3px;
+		background-color: #e8e8e8;
+	}
+	&__filled {
+		height: 5px;
+		background: #3396bd;
+		float: left;
+		border-radius: 3px;
+	}
+	&__footer {
+		line-height: 15px;
+	}
+	&__header,&__body {
+		margin-bottom: 8px;
+	}
+	.shape {
+
 	}
 }
