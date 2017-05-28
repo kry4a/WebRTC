@@ -170,7 +170,7 @@ gulp.task('clean', function() {
 
 // Сборка в продакшен
 // чистим, собираем картинки, собираем html, собираем css, собираем js, собираем библиотеки
-gulp.task('build', ['clean', 'img', 'html', 'css', 'js', 'libs'], function() {
+gulp.task('build', ['html', 'css', 'js', 'libs'], function() {
 	console.log('---------- Сборка');
 	
 	console.log('---------- Копирование CSS');
