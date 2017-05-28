@@ -18,6 +18,7 @@ html {
 }
 html, body {
 	height: 100%;
+	min-width: 1024px;
 }
 
 h1,h2,h3,h4 {
@@ -38,7 +39,7 @@ main.fill {
 }
 .section {
 	padding: 65px 0;
-
+	
 	&--rectangles {
 		color: #ffffff;
 	}
@@ -70,8 +71,10 @@ main.fill {
 
 .container {
 	position: relative;
+		
 	width: 1024px;	
-	
+	height: 100%;
+
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -314,7 +317,6 @@ main.fill {
 }
 .footer {
 	height: 60px;
-	padding: 25px;
 	background-color: #2d2d2d;
 	margin-top: -60px;
 	&--op {
@@ -324,8 +326,11 @@ main.fill {
 
 .copyright {
 	float: right;
+	margin-right: 15px;
 	color: #ffffff;
+	
 	font-size: 12px;
+	line-height: 60px;
 }
 
 
@@ -373,9 +378,10 @@ thead &__cell{
 	border-top: none;
 }
 .table-container {
-	width: 650px;
+	width: 100%;
 }
 .table-description {
+	color:#ffffff;
 	text-align: center;
 	font-size: 12px;
 }
@@ -480,8 +486,10 @@ thead &__cell{
 .block {
 	left:0;
 	right: 0;
+	top:0;
+	bottom: 0;
 	margin: auto;
-	margin-top:150px;
+	position: absolute;
 	&__desc {
 		padding-top: 15px;
 	}
@@ -510,7 +518,7 @@ thead &__cell{
 	}
 	&--active {
 		width:770px;
-		
+		height: 364px;
 		background-color: #ffffff;
 		color:#666666;
 		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
