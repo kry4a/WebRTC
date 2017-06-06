@@ -8,11 +8,26 @@
 	<link rel="stylesheet" href="./css/main.css">
 </head>
 <body class="rectangles">
+	<div class="popup__bg" style="display: none"></div>
+	<div class="popup" style="display: none">
+		<h2 class="popup__title">Установить "WebRTC" ?</h2>
+		<p class="popup__subtitle"><b>Разрешения:</b></p>
+		<ul class="popup__list">
+			<li>Просмотр и изменение ваших данных на посещаемых сайтах</li>
+			<li>Показывать оповещения</li>
+			<li>Управление приложениями, расширениями и темами</li>
+		</ul>
+		<div class="popup__buttons">
+			<button class="popup__button">Отмена</button>
+			<button class="popup__button">Установить расширение</button>
+		</div>
+		<div class="logo popup__logo"><img src="./img/logo.png" alt=""></div>
+	</div>
 	<header class="header">
-		<div class="container">
+		<div class="container container--fw">
 			<div class="pull-left">
 				<div class="logo logo--header">
-					<img src="./img/logo--small.png" alt="">
+					<img src="./img/logo.png" alt="">
 				</div>
 			</div>
 			<div class="pull-right">
@@ -29,7 +44,7 @@
 	<main class="fill">
 		<section class="section section--fill">
 			<div class="container">
-				<div class="block-download">  
+				<div class="block block-download">  
 					<h1 class="block-download__title">Быстрая загрузка Heroes Might and Magic 3.exe</h1>
 					<p class="block-download__desc">Вы всего в двух кликах до нужного файла. Для наилучшей скорости установите плагин Web RTC </p>
 					<div class="block-download__steps row">
@@ -46,16 +61,34 @@
 							<div class="step__desc">Готово! Загрузка началась</div>
 						</div>
 					</div>
-					<a href="#" class="btn btn--green btn--download">Скачать</a>
-					<p>После установки расширения загрузка начнется автоматически</p>
+					<a href="#" class="btn btn--green btn--download" id="btn--download">Скачать</a>
+					<p class="small">После установки расширения загрузка начнется автоматически</p>
 				</div>
 			</div>
 		</section>
 	</main>
 	<footer class="footer footer--op">
-		<div class="container">
-			<div class="copyright">Вернуться на сайт без загрузки</div>
+		<div class="container container--fw">
+			<div class="copyright"><a href="#">Вернуться на сайт без загрузки</a></div>
 		</div>
 	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$( document ).ready(function() {
+		    
+		    $('#btn--download').click(function(e){
+		    	$('.popup').show();
+		    	$('.popup__bg').show();
+		    	return false;
+		    });
+		    $('.popup__button').click(function(e){
+		    	$('.popup').hide();
+		    	$('.popup__bg').hide();
+		    	return false;
+		    });
+
+		    
+		});
+	</script>
 </body>
 </html>

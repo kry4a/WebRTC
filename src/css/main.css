@@ -16,6 +16,7 @@ html,
 body {
   height: 100%;
   min-width: 1024px;
+  min-height: 700px;
 }
 h1,
 h2,
@@ -27,15 +28,26 @@ h4 {
 p {
   margin: 0;
 }
+.small {
+  font-size: 14px;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
 main {
-  min-height: 100%;
-  padding-bottom: 60px;
+  min-height: 700px;
+  margin-bottom: -60px;
 }
 main.fill {
   height: 100%;
+  margin-top: -70px;
+}
+.spacer {
+  height: 120px;
 }
 .section {
-  padding: 65px 0;
+  padding: 70px 0;
 }
 .section--rectangles {
   color: #ffffff;
@@ -69,6 +81,10 @@ main.fill {
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+.container--fw {
+  width: 100%;
+  padding: 0 15px;
 }
 .col-4,
 .col-8,
@@ -108,8 +124,9 @@ main.fill {
   font-size: 24px;
 }
 .infoblock__desc {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 16px;
+  line-height: 24px;
 }
 .infoblock--bordered {
   border-left: 1px solid #95bbcb;
@@ -142,17 +159,13 @@ main.fill {
   font-size: 16px;
   margin-top: 0;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 .promo__image {
   width: 100%;
   height: 100%;
   transition: all .5s ease;
   cursor: pointer;
-}
-.promo__image:hover {
-  -ms-transform: scale(1.1);
-      transform: scale(1.1);
-  opacity: .8;
 }
 .promo__desc {
   font-size: 14px;
@@ -174,18 +187,20 @@ main.fill {
 .logo {
   width: 60px;
   height: 60px;
-  padding: 17px 14px;
   background-color: #f7f7f8;
   text-align: center;
   border-radius: 30px;
   margin-bottom: 35px;
   cursor: pointer;
 }
+.logo img {
+  width: 100%;
+  height: 100%;
+}
 .logo--header {
   width: 40px;
   height: 40px;
   margin: 0;
-  padding: 7px 5px;
   overflow: hidden;
   margin-top: 13px;
 }
@@ -203,7 +218,7 @@ main.fill {
 }
 .btn--green:hover {
   box-shadow: none;
-  background-color: #00df97;
+  background-color: #3cb48e;
 }
 .btn--install {
   display: block;
@@ -217,7 +232,7 @@ main.fill {
   height: 70px;
   font-size: 24px;
   line-height: 70px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 /* LINKS */
 .text-link {
@@ -239,14 +254,14 @@ main.fill {
 .link--sm {
   font-size: 12px;
   padding: 5px 15px;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 .link--md {
   font-size: 16px;
   padding: 15px 45px;
 }
 .link:hover {
-  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 /* reviews */
 .review {
@@ -267,7 +282,6 @@ main.fill {
 }
 .header {
   height: 70px;
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -301,7 +315,7 @@ main.fill {
 }
 .table__cell {
   font-size: 14px;
-  padding: 15px;
+  padding: 20px;
   color: #313131;
   text-align: center;
   vertical-align: middle;
@@ -317,7 +331,7 @@ main.fill {
   border-left: 1px solid #ffffff;
   border-top: 1px solid #ffffff;
 }
-.table__row:first-child .table__cell {
+thead .table__row:first-child .table__cell {
   border-top: 1px solid #57a2c1;
 }
 thead __cell {
@@ -409,7 +423,6 @@ thead __cell {
   color: #ffffff;
   text-align: center;
   height: 460px;
-  margin-top: 150px;
 }
 .block-download__title {
   font-size: 28px;
@@ -531,6 +544,7 @@ thead __cell {
 .popup__list {
   margin-top: 0;
   padding-left: 30px;
+  line-height: 24px;
 }
 .popup__logo {
   position: absolute;
