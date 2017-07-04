@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>WEB RTC</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="./player.js"></script>
+</head>
+<body class="rectangles">
+  <header class="header">
+    <div class="container container--fw">
+      <div class="pull-left">
+        <div class="logo logo--header">
+          <img src="./img/logo.png" alt="">
+        </div>
+      </div>
+      <div class="pull-right">
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="#" class="menu__link">О расширении</a>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </header>
+  <main class="fill">
+    <section class="section section--fill">
+      <div class="container">
+      <div class="block block--video">
+        <div id="player" class="player">
+          <div class="player__header">
+          <div class="player__info">
+            <div class="info info--up">9.2GB</div>
+            <div class="info info--down">0.5MB</div>
+            <div class="info info--sid">0/0</div>
+          </div>
+          </div>
+          <video id="player__video" class="player__video">
+            <source src='./video.m4v' type='video/mp4'>
+          </video>
+          <div class="player__controls">
+            <div class="player__btn play-btn player__btn--play"></div>
+            <div class="player__time"><span class="spenttime"></span></div><div class="player__progress progress">
+              <div class="progress__length">
+                <div class="progress__filled" style="width: 0">
+                  <div class="progress__button"></div>
+                </div>
+
+              </div>
+            </div><div class="player__time"><span class="fulltime"></span></div><div class="player__volume volume">
+              <div class="volume__level"><div class="volume__filled" style="width: 50%"></div></div>
+            </div><div class="player__btn player__btn--full"></div>
+          </div>
+        </div> 
+      </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer footer--op">
+    <div class="container container--fw">
+      <div class="copyright">Вернуться на сайт без загрузки</div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    
+    $(document).ready(function() {
+        $('video').videoPlayer({
+            'playerWidth' : 0.95,
+            'videoClass' : 'video' 
+        });
+    });
+  </script>
+</body>
+</html>
